@@ -1,0 +1,31 @@
+<div class="container my-3">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-5">
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burgers/burgers-block devoured=false}}
+      {{/unless}}
+      {{/each}}
+    </div>
+    <div class="col-5">
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burgers-blockdev devoured=true}}
+      {{/if}}
+      {{/each}}
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div>
+<div class="container my-3">
+  <center>
+    <form class="create-burger">
+      <div class="form-group">
+        <input type="text" id="burger" name="burger_name" class="form-control-lg">
+      </div>
+      <button type="submit" class="btn btn-primary text-white">Submit</button>
+    </form>
+    <p class="text-primary font-weight-bold">Enter a burger you want to eat and then click the "Submit" button.</p>
+  </center>
+</div>

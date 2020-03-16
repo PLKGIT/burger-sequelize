@@ -1,0 +1,21 @@
+body{
+    background-color: #ffca66;
+}
+
+h1{
+    color: red;
+}
+
+li{
+    padding: 5px;
+    margin: 5px;
+    background: white;
+    list-style: none;
+    color: darkgray
+}
+.boxed {
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid lightgray ;
+    background-color: white;
+  }
