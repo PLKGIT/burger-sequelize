@@ -1,26 +1,24 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "burgerseq_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "username": "ffot89zxh425v4bq",
+    "password": "rwebumsga7olumzd",
+    "database": "atyhfqinr0dqwbd5",
+    "host": "zy4wtsaw3sjejnud.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "root",
-    "database": "burgerseq_db",
-    "host": "127.0.0.1",
+    "username": "ffot89zxh425v4bq",
+    "password": "rwebumsga7olumzd",
+    "database": "atyhfqinr0dqwbd5",
+    "host": "zy4wtsaw3sjejnud.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "logging": false
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "burgerseq_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "username": "ffot89zxh425v4bq",
+    "password": "rwebumsga7olumzd",
+    "database": "atyhfqinr0dqwbd5",
+    "host": "zy4wtsaw3sjejnud.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
   }
 }
