@@ -14,16 +14,16 @@ var connection = mysql.createConnection({
   database: "burgerseq_db"
 });
 
-// if (process.env.JAWSDB_URL){
-//   connection = mysql.createConnection(process.env.JAWSDB_URL);
-// } else {
-//   connection = mysql.createConnection({
-//     host:'qbhol6k6vexd5qjs.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-//     user:'vchsywlhov3dgzlf',
-//     password: 'yj0zfow54kjz66rt',
-//     database: 'bbk0phd05y8qzfwo'
-//   });
-// };
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host:'zy4wtsaw3sjejnud.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user:'xgl2dbbtmor8e5ri',
+    password: 'ewy9ne28y8ydcyd8',
+    database: 'qyg91dg1pa5sjhau'
+  });
+};
 
 
 // Connect to Database
