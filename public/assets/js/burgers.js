@@ -2,18 +2,24 @@
 // burgers.js [Logic]
 // ******************************************************************************************************
 
-// Global Variables
-// --------------------------------------------------------
-// Customer Variables
-var cust_name;
-var errCustName = false;
-var cust_email;
-var errCustEmail = false;
-// Burger Variables
-var burger_name;
-var errBurgerName = false;
 
 $(document).ready(function () {
+
+  // Global Variables
+  // --------------------------------------------------------
+  // --------------------------------------------------------
+
+  // Customer Variables
+  // ------------------------------------------------
+  var cust_name;
+  var errCustName = false;
+  var cust_email;
+  var errCustEmail = false;
+
+  // Burger Variables
+  // ------------------------------------------------
+  var burger_name;
+  var errBurgerName = false;
 
   // Entry Validations
   // ------------------------------------------------
@@ -58,9 +64,6 @@ $(document).ready(function () {
     }
     return true;
   }
-
-
-  $(function () {
 
     // Login Button Clicked
     // =============================================================
@@ -160,7 +163,7 @@ $(document).ready(function () {
 
     //  Burger Button Clicked
     // =============================================================
-    $("#newBurger").on("submit", function (event) {
+    $("#newBurger").on("click", function (event) {
 
       burger_name = $("#burger").val().trim();
 
@@ -184,4 +187,3 @@ $(document).ready(function () {
     });
 
   });
-});
