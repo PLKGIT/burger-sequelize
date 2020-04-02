@@ -26,13 +26,11 @@ module.exports = function (app) {
             }
         }).then(function (data) {
             res.json(data);
-            console.log("+++++++++++ customer email received.....");
             console.log(data);
         })
             .catch(function (err) {
                 res.json(err);
             });
-        console.log("------- no emails found ---------");
         return null;
     });
     // Customers API Post Route
@@ -41,8 +39,9 @@ module.exports = function (app) {
             cust_name: req.body.cust_name,
             cust_email: req.body.cust_email
         }).then(function (data) {
-            res.json({ bid: data.cid });
+            res.json({ cid: data.cid });
             console.log(data)
+            console.log(data.cid)
         });
     });
 
@@ -62,7 +61,8 @@ module.exports = function (app) {
             burger_name: req.body.burger_name,
             devoured: req.body.devoured
         }).then(function (data) {
-            res.json({ bid: data.bid });
+            res.json(data);
+            console.log(data);
         });
     });
 
@@ -75,12 +75,8 @@ module.exports = function (app) {
                 bid: req.params.bid
             }
         }).then(function (data) {
-            if (data.changedRows == 0) {
-                // If no rows were changed, then the ID must not exist, so 404
-                return res.status(404).end();
-              } else {
-                res.status(200).end();
-              }
+            res.json(data);
+            console.log(data);
         });
 
     });
