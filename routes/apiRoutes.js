@@ -12,10 +12,16 @@ var express = require("express");
 module.exports = function (app) {
     // Customers API Get Route
     app.get("/api/customers", function (req, res) {
-        db.Customer.findAll({}).then(function (data) {
+        db.Customer.findAll({
+
+        }).then(function (data) {
             res.json(data);
-            console.log(data);
-        });
+            // console.log(data);
+        })
+            .catch(function (err) {
+                res.json(err);
+            });
+        return null;
     });
 
     // Customers API Get Route by Customer Email
@@ -26,7 +32,6 @@ module.exports = function (app) {
             }
         }).then(function (data) {
             res.json(data);
-            console.log(data);
         })
             .catch(function (err) {
                 res.json(err);
@@ -40,9 +45,14 @@ module.exports = function (app) {
             cust_email: req.body.cust_email
         }).then(function (data) {
             res.json({ cid: data.cid });
-            console.log(data)
+            // console.log(data)
+            console.log("Customer ID after Create")
             console.log(data.cid)
-        });
+        })
+            .catch(function (err) {
+                res.json(err);
+            });
+        return null;
     });
 
     // Burgers API Get Route
@@ -53,17 +63,26 @@ module.exports = function (app) {
             ]
         }).then(function (data) {
             res.json(data);
-            console.log(data);
-        });
+            // console.log(data);
+        })
+            .catch(function (err) {
+                res.json(err);
+            });
+        return null;
     });
+
     app.post("/api/burgers", function (req, res) {
         db.Burger.create({
             burger_name: req.body.burger_name,
             devoured: req.body.devoured
         }).then(function (data) {
             res.json(data);
-            console.log(data);
-        });
+            // console.log(data);
+        })
+            .catch(function (err) {
+                res.json(err);
+            });
+        return null;
     });
 
     app.put("/api/burgers/:bid", function (req, res) {
@@ -76,8 +95,11 @@ module.exports = function (app) {
             }
         }).then(function (data) {
             res.json(data);
-            console.log(data);
-        });
-
+            // console.log(data);
+        })
+            .catch(function (err) {
+                res.json(err);
+            });
+        return null;
     });
 };

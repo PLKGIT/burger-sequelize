@@ -27,7 +27,15 @@ module.exports = function (app) {
                 burgers: data
             };
             res.render("burgers", hbsObject)
-            console.log(data)
         });
     });
+
+    
+    // 404
+    //---------------------------------------
+
+    app.get("*", function (req, res) {
+        res.render("404");
+    });
+
 };

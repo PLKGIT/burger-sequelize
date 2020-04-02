@@ -1,8 +1,13 @@
 <div class="container my-3">
   <div class="row">
+    <center>
+      <span id="welcome"></span>
+    </center>
+  </div>
+  <div class="row">
     <div class="col-1"></div>
     <div class="col-5">
-      <h5 class="text-center text-primary">Uneaten Burgers</h5>
+      <h5 class="text-primary">Ready to eat...</h5>
       {{#each burgers}}
       {{#unless dataValues.devoured}}
       {{> burgers/burgers-block}}
@@ -22,6 +27,7 @@
 </div>
 <div class="container my-3">
   <center>
+    <span class="error" id="msgBurger"></span>
     <form class="create-burger">
       <div class="form-group">
         <input type="text" id="burger" name="burger_name" class="form-control-lg">
