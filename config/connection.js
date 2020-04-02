@@ -19,9 +19,9 @@ if (process.env.JAWSDB_URL){
 } else {
   connection = mysql.createConnection({
     host:'zy4wtsaw3sjejnud.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    user:'xgl2dbbtmor8e5ri',
-    password: 'ewy9ne28y8ydcyd8',
-    database: 'qyg91dg1pa5sjhau'
+    user:'ffot89zxh425v4bq',
+    password: 'rwebumsga7olumzd',
+    database: 'atyhfqinr0dqwbd5'
   });
 };
 
