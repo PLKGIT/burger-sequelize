@@ -1,9 +1,9 @@
 <div class="row">
 	<div class="col-8 boxed">
-		{{id}}. {{burger_name}}
+		{{dataValues.burger_name}}
 	</div>
 	<div>
-		<button class="mt-3" id="change-devour" data-id="{{id}}" data-newdevour="{{devoured}}">
+		<button class="mt-3" id="change-devour" type="submit" data-id="{{dataValues.bid}}" data-newdevour="{{dataValues.devoured}}">
 			{{#if devoured}}{{else}}DEVOUR IT!{{/if}}
 		</button>
 	</div>

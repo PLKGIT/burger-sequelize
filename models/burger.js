@@ -1,17 +1,44 @@
 // ******************************************************************************************************
 // burger.js [Models]
 // ******************************************************************************************************
-
-module.exports = function(sequelize, DataTypes) {
+"use strict";
+module.exports = function (sequelize, Sequelize) {
   var Burger = sequelize.define("Burger", {
-    burger_name: DataTypes.STRING,
-    devoured: DataTypes.TINYINT
-  });
+    bid: {
+      type: Sequelize.INTEGER(11),
+      primaryKey: true,
+      autoIncrement: true,
+      unique: true,
+      allowNull: false
+    },
+    burger_name: {
+      type: Sequelize.STRING(50),
+      allowNull: false,
+      validate: {
+          len: {
+              args: 3,
+              msg: "Name must be at least 3 characters in length"
+          }
+      }
+    },
+    cid: {
+      type: Sequelize.INTEGER(11)
+    },
+    cust_name: {
+      type: Sequelize.STRING(50)
+  },
+    devoured: {
+      type: Sequelize.TINYINT(1),
+      allowNull: false,
+      defaultValue:0
+    }
+  }, { timestamps: false });
+
+  Burger.associate = function (db) {
+    db.Burger.belongsTo(db.Customer, { 
+      foreignKey: 'cid', 
+      onDelete: "CASCADE"
+    });
+  };
   return Burger;
 };
-module.exports = Burger;
-
-
-// Variable = Burger --> convenion is to capitalize the variable and export
-// Table = Burger (see line 6 - sequelize will add an "s" unless you specify 'freezeTableName:true' after last column name)
-// Sequelize will create an 'id' column, so I do not need to specify that
