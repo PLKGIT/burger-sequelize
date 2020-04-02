@@ -60,7 +60,7 @@ module.exports = function (app) {
     app.post("/api/burgers", function (req, res) {
         db.Burger.create({
             burger_name: req.body.burger_name,
-            devoured: 0
+            devoured: req.body.devoured
         }).then(function (data) {
             res.json({ bid: data.bid });
         });
@@ -75,8 +75,12 @@ module.exports = function (app) {
                 bid: req.params.bid
             }
         }).then(function (data) {
-            res.json(data);
-            console.log(data);
+            if (data.changedRows == 0) {
+                // If no rows were changed, then the ID must not exist, so 404
+                return res.status(404).end();
+              } else {
+                res.status(200).end();
+              }
         });
 
     });
