@@ -10,6 +10,7 @@ Homework #13
   * Sequelize NPM v5.21.5
   * MySQL and MySQL2
   * Heroku
+  * Handlebars
   * HTML
   * CSS
   * Bootstrap
