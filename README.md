@@ -1,18 +1,20 @@
 # Eat-Da-Burger with Sequelize
-Homework #13
+
+![Eat Da Burger Sequelize](https://res.cloudinary.com/damplk/image/upload/v1585864960/portal/hw_burgers_1_ehpdee.png "Login")
+![Eat Da Burger Sequelize](https://res.cloudinary.com/damplk/image/upload/v1585864962/portal/hw_burgers_2_c0ood8.png "Logged In")
 
 ## Overview
- Create a burger logger with MySQL, Node, Express, Handlebars and Sequelize. Be sure to follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.
+App allows users to submit a desired burger via an input form.  Burgers are added to the page with an associated "devour" button. When the burger is devoured, the burger moves to the right side the screen with the name of the user who devoured the burger and its name greyed out.
 
-### Technologies Used
+### Technologies
   * Node JS v12.13.0
   * Express Node Package Manager (NPM) v4.17.1
   * Sequelize NPM v5.21.5
   * MySQL and MySQL2
   * Heroku
   * Handlebars
-  * HTML
-  * CSS
+  * HTML5
+  * CSS3
   * Bootstrap
 
 ### Using Eat-Da-Burger
@@ -27,15 +29,10 @@ Homework #13
     * Click the Customers link in the footer to see all customers
     * Click the Burgers link in the footer to see all burgers
 
-## Completed Assignment
+## Completed
 
-### Due
-Sunday, March 22, 2020
-
-### Student
+### Developer
 Pam Kelly at [esq.kelly@gmail.com](mailto:esq.kelly@gmail.com)
-
-Full-Stack Coding Bootcamp through UCB Extension
 
 ### Completed Assignment URLs
 #### Github repository
@@ -44,7 +41,5 @@ Full-Stack Coding Bootcamp through UCB Extension
 [Eat da Burger](https://strawberry-crumble-91573.herokuapp.com/) at https://strawberry-crumble-91573.herokuapp.com/
 #### Eat-Da-Burger on Portfolios
 [Professional Porfolio](https://www.pamkelly.com/portdev.html) at https://www.pamkelly.com/portdev.html
-[Bootstrap Portfolio](https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html) at https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html
 
-
-Copyright &copy; 2020 Pamela L. Kelly
+Copyright &copy; 2019-2020 Pamela L. Kelly
