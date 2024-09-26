@@ -30,7 +30,7 @@
     "express-handlebars": "^5.3.1",
     "handlebars": "^4.7.7",
     "mysql": "^2.18.1",
-    "mysql2": "^2.1.0",
+    "mysql2": "^3.9.8",
     "nodemon": "^2.0.20",
     "sequelize": "^6.29.0",
     "sequelize-cli": "^5.5.1",
